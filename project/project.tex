@@ -8,37 +8,84 @@
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+%\renewcommand\qedsymbol{$\blacksquare$}
 
 \begin{document}
 
 \maketitle
 
+\section{Abstract}
+
 \section{Introduction}
 
-\section{Background}
-A Hadamard matrix is a square matrix whose entries are either +1 or -1 and whose rows are mutually orthogonal.
-
-
+\begin{definition}
+ A Hadamard matrix is a square matrix whose entries are either +1 or -1 and whose rows are mutually orthogonal.
+\end{definition}
 
 \section{Construction}
 There are several ways to construct Hadamard matrices. For example, James Joseph Sylvester proposed the following: Let $H$ be a Hadamard matrix of order $n$. Then
-\begin{matrix}
+\begin{equation*}
+\begin{bmatrix}
 H & H \\
 H & -H
-\end{matrix}
+\end{bmatrix}
+\end{equation*}
 is a Hadamard matrix of order $2n$. This construction could lead to the following sequence of Hadamard matrices:
-$H_1$ = \begin{matrix}
+$H_1 =
+\begin{bmatrix}
 1
-\end{matrix},
-$H_2$ = \begin{matrix}
+\end{bmatrix},
+$
+$H_2 =
+\begin{bmatrix}
 1 & 1 \\
 1 & -1 \\
-\end{matrix},
-$H_{2^k}$ = \begin{matrix}
+\end{bmatrix},
+$
+$H_{2^k} =
+\begin{bmatrix}
 H_{2^{k-1}} & H_{2^{k-1}} \\
 H_{2^{k-1}} & H_{2^{k-1}}
-\end{matrix}
+\end{bmatrix}
+$
 
+\section{Equality of Hadamard Matrices}
+
+\section{Results}
+\begin{theorem}
+Let $H$ be a Hadamard matrix of order $n$. Then $HH^T = nI_n$.
+\end{theorem}
+
+\begin{proof}
+Since each entry in $H$ is $\pm 1$, we know that the length of each row vector is $\sqrt{n}$. Further, we know from the definition of Hadamard matricecs that each row is orthogonal to each other row, so if we divide $H$ by $\sqrt n$ we obtain an orthognal matrix $Q = \frac{1}{\sqrt n} H$. We then see that
+\begin{align*}
+  QQ^T &= I_n\\
+  \left(\frac{1}{\sqrt n} H\right)\left(\frac{1}{\sqrt n} H^T\right) &= I_n\\
+  HH^T &= nI_n
+\end{align*}
+\end{proof}
+
+\begin{theorem}
+If $H$ is an $n \times n$ Hadamard matrix, then $n = 1$ or $n = 2$ or $n \equiv 0 \mod 4$.
+\end{theorem}
+
+\begin{proof}
+\end{proof}
+
+\begin{theorem}
+There exists an $n \times n$ matrix with entries $\pm 1$ whose determinant is greater than $\sqrt{n!}$
+\end{theorem}
+
+\begin{proof}
+\end{proof}
 \section{Applications}
 
 \section{Current Research}
