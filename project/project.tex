@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{18.304 Final Project \\  Hadamard Matrices}
+\author{Nicolas Bravo \\ nbravo@mit.edu }
+\date{May 2015}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Background}
+A Hadamard matrix is a square matrix whose entries are either +1 or -1 and whose rows are mutually orthogonal.
+
+
+
+\section{Construction}
+There are several ways to construct Hadamard matrices. For example, James Joseph Sylvester proposed the following: Let $H$ be a Hadamard matrix of order $n$. Then
+\begin{matrix}
+H & H \\
+H & -H
+\end{matrix}
+is a Hadamard matrix of order $2n$. This construction could lead to the following sequence of Hadamard matrices:
+$H_1$ = \begin{matrix}
+1
+\end{matrix},
+$H_2$ = \begin{matrix}
+1 & 1 \\
+1 & -1 \\
+\end{matrix},
+$H_{2^k}$ = \begin{matrix}
+H_{2^{k-1}} & H_{2^{k-1}} \\
+H_{2^{k-1}} & H_{2^{k-1}}
+\end{matrix}
+
+\section{Applications}
+
+\section{Current Research}
+
+\section{Conclusion}
+
+\end{document}
+
